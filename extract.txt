@@ -1,1 +1,4 @@
-texts
+import pdfplumber
+
+invoice_pdf=pdfplumber.open('sample1.pdf')
+print(invoice_pdf.pages[0].extract_text())
